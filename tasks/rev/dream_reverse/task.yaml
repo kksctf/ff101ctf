@@ -1,0 +1,11 @@
+name: Просто сказка
+description: |
+  Все, что так близко нашему сердцу.
+
+  Пароль от архива - `infected` 
+  **Это является таском на малварь. Запускать на своем устройстве вне виртуальной машины - на свой страх и риск!**
+author: '@pr0t0boo'
+category: rev
+flag: ptctf{fr0m_st4nd0ff_w1th_love_4nd_t3nd3rn3ss}
+warmup: false
+server_port: null

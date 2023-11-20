@@ -1,0 +1,7 @@
+name: PTFLagInstaller
+description: Вот вам флаг. Бесплатно! Вам нужно только установить его.
+author: '@greg0r0'
+category: rev
+flag: ptctf{w3ll_l0c4l_ch3ck_1s_b4d_1d34}
+warmup: false
+server_port: null

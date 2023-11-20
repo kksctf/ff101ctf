@@ -1,0 +1,100 @@
+/* HEADER */
+html,body{
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+.background {
+  background-image: url(img/jail_background.jpg);
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.inputter{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="text"]{
+    border: 1px;
+    border-style: solid;
+    border-color: #fff;
+    background-color: transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    letter-spacing: 2px;
+    height: 50px;
+    font-size: 46px;
+    color: floralwhite;
+    cursor: default;
+}
+* { margin: 0; padding: 0; }
+.terminal {
+    margin-top: 25%;
+    width: 60%;
+    border-radius: 5px 5px 0 0;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+.terminal .top {
+    background: #E8E6E8;
+    color: black;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+.terminal .btns {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+}
+.terminal .circle {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-left: 2px;
+    border-width: 1px;
+    border-style: solid;
+}
+.title{
+    text-align: center;
+}
+.red { background: #EC6A5F; border-color: #D04E42; }
+.green { background: #64CC57; border-color: #4EA73B; }
+.yellow{ background: #F5C04F; border-color: #D6A13D; }
+.clear{clear: both;}
+.terminal .body {
+    background: black;
+    color: #7AFB4C;
+    padding: 8px;
+    overflow: auto;
+}
+.shadow { box-shadow: 0px 0px 10px rgba(0,0,0,.4)}
+.inner {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    padding: 50px;  
+  }
+header h1 {
+font-size: 70px;
+font-weight: 600;
+color: #fdfdfe;
+text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Заметки
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    {% for note in note_list %}
+    <div class="col-md-6 item">
+      <div class="item-in">
+        <h4>{{ note.name }}</h4>
+        <div class="seperator"></div>
+        <p>{{ note.note }}</p>
+        <a href="{{ url_for('specific_note', index=note.id) }}">Читать далее
+          <i class="fa fa-long-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+version: "3"
+services:
+  task:
+    build: service/
+    ports:
+      - "7821:80"
+
+  bot:
+    build: bot/
+    links:
+      - task
+    depends_on:
+      - task
+    privileged: true

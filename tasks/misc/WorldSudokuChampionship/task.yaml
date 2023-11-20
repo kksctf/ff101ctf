@@ -1,0 +1,8 @@
+name: World Sudoku Championship
+description: На нашем чемпионате по судоку первое место всегда занимал искусственный интеллект, но его датасет повредился и на вас возложили тяжелую задачу - решить все за него.
+author: '@chiukki'
+category: misc
+flag: ptctf{1_g0t_s0me_sud0ku_t01l3t_p444p3r}
+warmup: false
+server_port: 2806
+is_http: false

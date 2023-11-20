@@ -1,0 +1,1 @@
+flag = r'ptctf{just_s0m3_h34d3r_m3ss}'

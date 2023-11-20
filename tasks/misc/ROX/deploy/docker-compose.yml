@@ -1,0 +1,8 @@
+version: "2.0"
+
+services:
+  tcplistener:
+    build: .
+    image: tcpserver
+    ports:
+      - "2802:2802"

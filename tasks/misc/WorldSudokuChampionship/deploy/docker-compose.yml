@@ -1,0 +1,10 @@
+version: "2.0"
+
+services:
+  tcplistener:
+    build: .
+    image: tcpserver
+    expose:
+      - 2802
+    ports:
+      - "2806:2802"

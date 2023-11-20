@@ -1,0 +1,25 @@
+name: pomidor
+description: |2+
+  "
+                        ,
+                      /.\
+                    //_`\
+                _.-`| \ ``._
+            .-''`-.       _.'`.
+          .'      / /'\/`.\    `. 
+        /   .    |/         `.  \
+        '   /                  \  ;
+      :   '            \       : :
+      ;  ;             ;      /  .
+        ' :             .     '  /
+        \ \           /       .'
+          `.`        .'      .'
+            `-..___....----`
+  "
+
+author: "@anfinogenov"
+category: web
+flag: ptctf{pomidori_pomidori_10m4103$$}
+warmup: false
+server_port: 3333
+domain_prefix: pomidor

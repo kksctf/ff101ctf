@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "9099:80" # Map the port for the Vue.js app
+    networks:
+      - app-network
+
+  backend:
+    build: ./backend
+    expose:
+      - "80"
+    networks:
+      - app-network
+
+networks:
+  app-network:

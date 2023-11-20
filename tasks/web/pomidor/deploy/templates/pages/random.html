@@ -1,0 +1,149 @@
+{{define "pomidors"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{template "bootstrap" .}}
+
+    <title>Pomidors</title>
+
+    <style>
+        #dvd {
+            position: absolute;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    {{template "navbar" .}}
+
+    {{range .Pomidors}}
+    <img class="dvd" style="position: absolute;" src='data:image/jpeg;base64, {{.Data}}'>
+    {{end}}
+
+    <iframe style="position: absolute; z-index: -1;" width="100%" height="80%"
+        src="https://www.youtube.com/embed/cbu1o0rYeC0?controls=0" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <script type="text/javascript">
+        var win = window,
+            ww = win.innerWidth,
+            wh = win.innerHeight;
+
+        function getVendor() {
+            var ua = navigator.userAgent.toLowerCase(),
+                match = /opera/.exec(ua) || /msie/.exec(ua) || /firefox/.exec(ua) || /(chrome|safari)/.exec(ua) || /trident/.exec(ua),
+                vendors = {
+                    opera: '-o-',
+                    chrome: '-webkit-',
+                    safari: '-webkit-',
+                    firefox: '-moz-',
+                    trident: '-ms-',
+                    msie: '-ms-',
+                };
+
+            return vendors[match[0]];
+        };
+
+        const directions = ["nw", "ne", "sw", "se"];
+
+        class Box {
+            constructor(box) {
+                this.box = box;
+                this.direction = directions[Math.floor(Math.random() * directions.length)];
+                this.translateX = Math.floor((Math.random() * ww) + 1);
+                this.translateY = Math.floor((Math.random() * wh) + 1);
+                this.speed = Math.floor(Math.random() * 7) + 1;
+                this.boxWidth = this.box.offsetWidth;
+                this.boxHeight = this.box.offsetHeight;
+                this.boxTop = this.box.offsetTop;
+                this.boxLeft = this.box.offsetLeft;
+                this.xMin = -this.boxLeft;
+                this.yMin = -this.boxTop;
+                this.xMax = win.innerWidth - this.boxLeft - this.boxWidth;
+                this.yMax = win.innerHeight - this.boxTop - this.boxHeight;
+
+                setInterval(() => this.move(), 20);
+            }
+
+            move() {
+                this.setDirection();
+                this.setStyle({
+                    transform: 'translate3d(' + this.translateX + 'px, ' + this.translateY + 'px, 0)',
+                });
+            }
+
+            setDirection() {
+                switch (this.direction) {
+                    case 'ne':
+                        this.translateX += this.speed;
+                        this.translateY -= this.speed;
+                        break;
+                    case 'nw':
+                        this.translateX -= this.speed;
+                        this.translateY -= this.speed;
+                        break;
+                    case 'se':
+                        this.translateX += this.speed;
+                        this.translateY += this.speed;
+                        break;
+                    case 'sw':
+                        this.translateX -= this.speed;
+                        this.translateY += this.speed;
+                        break;
+                }
+                this.setLimits();
+            }
+
+            setLimits() {
+                if (this.translateY <= this.yMin) {
+                    if (this.direction == 'nw') {
+                        this.direction = 'sw';
+                    } else if (this.direction == 'ne') {
+                        this.direction = 'se';
+                    }
+                }
+                if (this.translateY >= this.yMax) {
+                    if (this.direction == 'se') {
+                        this.direction = 'ne';
+                    } else if (this.direction == 'sw') {
+                        this.direction = 'nw';
+                    }
+                }
+                if (this.translateX <= this.xMin) {
+                    if (this.direction == 'nw') {
+                        this.direction = 'ne';
+                    } else if (this.direction == 'sw') {
+                        this.direction = 'se';
+                    }
+                }
+                if (this.translateX >= this.xMax) {
+                    if (this.direction == 'ne') {
+                        this.direction = 'nw';
+                    } else if (this.direction == 'se') {
+                        this.direction = 'sw';
+                    }
+                }
+            }
+
+            setStyle(properties) {
+                var prefix = getVendor(),
+                    property, css = '';
+                for (property in properties) {
+                    css += property + ': ' + properties[property] + ';';
+                    css += prefix + property + ': ' + properties[property] + ';';
+                }
+                this.box.style.cssText += css;
+            }
+        }
+
+        [].slice.call(document.getElementsByClassName('dvd')).map(box => new Box(box));
+
+    </script>
+</body>
+
+</html>
+{{end}}

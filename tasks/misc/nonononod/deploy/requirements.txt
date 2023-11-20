@@ -1,0 +1,5 @@
+Flask~=3.0.0
+Flask-Alembic~=2.0.1
+Flask-Migrate~=4.0.5
+asyncpg==0.28.0
+levenshtein

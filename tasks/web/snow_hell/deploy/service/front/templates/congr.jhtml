@@ -1,0 +1,34 @@
+{% extends "base.jhtml" %}
+
+{% block css %}
+    {{ super() }}
+    <style>
+        .form-congr {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+        {% if message %}
+            <div class="bg-warning text-dark">
+                {{ message }}
+            </div>
+        {% endif %}
+        <form class="form-congr" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Кому</label>
+                <input type="text" class="form-control" id="username" name="username" value="{{ username or '' }}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Поздравление:</label>
+                <textarea name="congr" class="form-control" placeholder="" style="height: 150px">{{ congr or '' }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

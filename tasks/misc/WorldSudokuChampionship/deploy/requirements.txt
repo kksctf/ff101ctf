@@ -1,0 +1,3 @@
+pyfiglet
+loguru
+py-sudoku

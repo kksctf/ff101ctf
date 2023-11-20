@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+databases
+python-jose[cryptography]
+passlib
+aiosqlite
+python-multipart

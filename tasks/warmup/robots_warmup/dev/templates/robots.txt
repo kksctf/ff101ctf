@@ -1,0 +1,16 @@
+<html>
+<head>
+<meta name="color-scheme" content="light dark">
+</head>
+
+<body>
+<pre style="word-wrap: break-word; white-space: pre-wrap;">
+User-agent: S3CR3T_R3B3L_S34RCH3R
+Allow: /s3cr3t_3ntry_f0r_r3b3l_b0ts
+
+User-Agent: *
+Disallow: /
+</pre>
+</body>
+
+</html>

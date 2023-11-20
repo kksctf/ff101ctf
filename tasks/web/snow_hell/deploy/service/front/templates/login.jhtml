@@ -1,0 +1,34 @@
+{% extends "base.jhtml" %}
+
+{% block css %}
+    {{ super() }}
+    <style>
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+        {% if message %}
+            <div class="bg-warning text-dark">
+                {{ message }}
+            </div>
+        {% endif %}
+        <form class="form-signin" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" value="{{ username or '' }}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" value="{{ password or '' }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

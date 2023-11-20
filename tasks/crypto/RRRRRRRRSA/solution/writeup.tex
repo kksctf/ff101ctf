@@ -1,0 +1,21 @@
+% !TeX program = xelatex
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\begin{document}
+    RSA: 
+    
+    $ pt ^ e = ct (mod\ N) $
+
+    $ ct ^ d = pt (mod\ N) $
+
+    $ d * e \equiv 1 (mod\ \phi(N))$ 
+
+    В общем случае:
+    $ \phi(N) = (p-1)*(q-1) $ 
+    
+    В задании N состоит из 32 простых компонент, соответственно $ \phi(N) = (p_1-1)*(p_2-1)*...*(p_{32}-1) $
+
+    Инвертируем e по $\phi(N)$, получаем d, восстанавливаем pt из ct. Автоматизировано в solve.py.
+\end{document}

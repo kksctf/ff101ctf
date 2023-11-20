@@ -1,0 +1,8 @@
+name: 1001 tar
+description: |
+  'Надеюсь, что ты не будешь решать это в лоб? Конечно, 7zip всемогущ, но кликалке будет больно. Я на всякий случай заменил названия файла на непереваримую белиберду, но ты же вооружился хекс-редактором?)'
+author: '@hexadec1mal'
+category: forensic
+flag: ptctf{d1d_y0u_s0lv3d_17_by_s7ruc7ur3s}
+warmup: false
+server_port: null

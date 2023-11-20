@@ -1,0 +1,53 @@
+<header>
+    <nav>
+        <ul>
+            {{ if .User }}
+            <li><a href="/profile">{{ .User.Username }}</a></li>
+            <li>
+                <form action="/logout" method="post">
+                    <input type="submit" name="logout" value="Logout" />
+                </form>
+            </li>
+            {{ else }}
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Log In</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+</header>
+
+{{define "navbar"}}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Pomidor storage</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {{ if .User }}
+                <li class="nav-item">
+                    <a class="nav-link" href="/pomidors/all">All pomidors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pomidors/my">My pomidors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pomidors/random">i'm feeling lucky</a>
+                </li>
+                {{ end }}
+            </ul>
+            {{ if .User }}
+            <a class="nav-link me-2" href="/profile">{{ .User.Username }}</a>
+            <form action="/logout" method="post">
+                <button class="btn btn-sm btn-outline-secondary" type="submit">Logout</button>
+            </form>
+            {{ else }}
+            <a class="nav-link me-2" href="/register">Register</a>
+            <a class="nav-link" href="/login">Log In</a>
+            {{ end }}
+        </div>
+    </div>
+</nav>
+{{end}}

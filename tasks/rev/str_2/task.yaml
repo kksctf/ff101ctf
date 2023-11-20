@@ -1,0 +1,7 @@
+name: Strings II
+description: Занятный факт - в соответствии с некоторым толкованием стандартов строкой можно назвать любую последовательность байт, которая заканчивается нулевым байтом (0x00).
+author: '@greg0r0'
+category: rev
+flag: ptctf{1ts_y0ur_f1rst_r34l_r3v3rs3_t4sk?}
+warmup: false
+server_port: null

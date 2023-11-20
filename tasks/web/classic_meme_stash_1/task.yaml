@@ -1,0 +1,10 @@
+name: Classic Meme Stash 1
+description: |
+  'Начал писать эталонную хранилку мемов. На случай если забуду креды от vps - добавил себе подсказок как вернуться.
+  Надеюсь, что никто другой не в силах ее поломать...'
+author: '@hexadec1mal'
+category: web
+flag: ptctf{4dm1n_w4s_34sy_70_h4ck}
+warmup: false
+server_port: 9099
+domain_prefix: memestash

@@ -1,0 +1,20 @@
+{{define "profile"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{template "bootstrap" .}}
+
+    <title>User profile</title>
+</head>
+
+<body>
+    {{template "navbar" .}}
+    <h1>Welcome {{.User.Username}}</h1>
+
+    <a class="link-offset-3 me-2" href="/pomidors/all">All pomidors</a>
+    <a class="link-offset-3" href="/pomidors/my">My pomidors</a>
+</body>
+
+</html>
+{{end}}

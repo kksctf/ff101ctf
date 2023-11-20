@@ -1,0 +1,18 @@
+name: Snow Hell
+
+description: |
+  Ещё не новый год, и даже не рождество, но почему бы не поздравить друг-друга?
+
+  Правда, для этого придется продраться через снежный ад...
+
+author: "@Rubikoid"
+
+category: web
+
+flag: ptctf{m0r3_l4GGy_sn0w_f0r_TH3_XX5_g0d}
+
+warmup: false
+
+server_port: 7821
+
+domain_prefix: snow-hell

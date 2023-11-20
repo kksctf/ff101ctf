@@ -1,0 +1,6 @@
+version: "3"
+services:
+  ppc_calc:
+    build: .
+    ports:
+      - "7000:1337"

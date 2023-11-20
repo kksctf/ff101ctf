@@ -1,0 +1,12 @@
+name: Classic Meme Stash 2
+description: |
+  'Я писал jwt-аутентификацию в 3 часа ночи, и она настолько гениальная, что утром я не смог понять свой же код.
+
+  От греха подальше отключил вход для пользователя `jwt_is_unbreakable`, мало ли что... Сервер тот же.'
+
+author: '@hexadec1mal'
+category: web
+flag: ptctf{4w3s0m3_jw7_unh4ck1ng}
+warmup: false
+server_port: 9099
+domain_prefix: memestash

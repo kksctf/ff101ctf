@@ -1,0 +1,40 @@
+{{define "pomidors"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{template "bootstrap" .}}
+
+    <title>Pomidors</title>
+</head>
+
+<body>
+    {{template "navbar" .}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Owner</th>
+                <th scope="col">#</th>
+                <th scope="col">Data</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Pomidors}}
+            <tr>
+                <td>{{.Username}}</td>
+                <td>{{.ID}}</td>
+                <td><img src='data:image/jpeg;base64, {{.Data}}'></td>
+                <td>
+                    {{if .Token}}
+                    <a href="/pomidors/{{.Token}}">/pomidors/{{.Token}}</a>
+                    {{end}}
+                </td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</body>
+
+</html>
+{{end}}

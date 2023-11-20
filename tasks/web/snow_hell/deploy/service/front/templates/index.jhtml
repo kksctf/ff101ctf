@@ -1,0 +1,19 @@
+{% extends "base.jhtml" %}
+
+{% block content %}
+
+<div class="container text-center">
+    {% if not curr_user %}
+        <h4 class="text-info"> Хочешь кого-нибудь поздравить? Зарегистрируйся! </h4>
+    {% else %}
+        {% if not curr_user["admin"] %}
+            <h4 class="text-info"> Твои поздравления в твоих руках - так отправь их кому-нибудь! </h4>
+            <!-- админ: не админ; сервис с поздравлениями я дам, флаг я не дам -->
+        {% else %}
+            <h4 class="text-info"> Ура, ты видишь чужие поздравления... </h4>
+            <!-- админ: админ; флаг: ptctf{m0r3_l4GGy_sn0w_f0r_TH3_XX5_g0d} -->
+        {% endif %}
+    {% endif %}
+
+</div>
+{% endblock %}

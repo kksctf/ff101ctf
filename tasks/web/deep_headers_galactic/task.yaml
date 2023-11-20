@@ -1,0 +1,8 @@
+name: deep_headers_galactic
+description: В давней давней истории был один разведчик...
+author: "@greg0r0"
+category: web
+flag: ptctf{just_s0m3_h34d3r_m3ss}
+warmup: false
+server_port: 7500
+domain_prefix: deep-headers

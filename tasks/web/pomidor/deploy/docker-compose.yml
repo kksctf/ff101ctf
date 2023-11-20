@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build: .
+    environment:
+      - JWT_SECRET=c8018e682bc50c25a42c61a4fa02b4e464caf4f86e62406d026769d86320ba16
+      - ADMIN_PASSWORD=e6b7974bb0bc9095db5d6a5a7b28a30dcbb2ec56085767e19fd697e13f4c3857
+      - FLAG=ptctf{pomidori_pomidori_10m4103$$}
+      - POMIDOR_SALT=pom
+    ports:
+      - "3333:3333"

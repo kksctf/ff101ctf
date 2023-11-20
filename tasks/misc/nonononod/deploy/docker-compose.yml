@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 5689:5689
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_DEBUG=1

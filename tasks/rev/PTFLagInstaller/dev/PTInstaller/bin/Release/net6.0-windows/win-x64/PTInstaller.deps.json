@@ -1,0 +1,24 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {},
+    ".NETCoreApp,Version=v6.0/win-x64": {
+      "PTInstaller/1.0.0": {
+        "runtime": {
+          "PTInstaller.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PTInstaller/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

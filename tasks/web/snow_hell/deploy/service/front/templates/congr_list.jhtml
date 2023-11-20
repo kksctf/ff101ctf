@@ -1,0 +1,38 @@
+{% extends "base.jhtml" %}
+
+{% block css %}
+    {{ super() }}
+    <style>
+        .card {
+            width: 100%;
+            max-width: 330px;
+            padding: 5px;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+        {% if message %}
+            <div class="bg-warning text-dark">
+                {{ message }}
+            </div>
+        {% endif %}
+        <div class="row">
+            {% for congr in congrs_about_me %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class=" text-info card-title">От: {{ congr['from'] }}</h5>
+                        <h5 class=" text-info card-title">Кому: {{ congr['to'] }}</h5>
+                        {% if not do_kek %}
+                            <p class=" text-info card-text">{{ congr['congr'] | safe }}</p>
+                        {% else %}
+                            <p class=" text-info card-text">{{ congr['congr'] }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

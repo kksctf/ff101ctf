@@ -1,0 +1,8 @@
+name: nonononod
+description: Пожалуйста, используйте наш калькулятор правильно. И не выходите за рамки дозволенного.
+author: chiukki
+category: misc
+flag: ptctf{l3t_m3_0ut_0f_h3r3}
+warmup: false
+server_port: 5689
+domain_prefix: nonononod

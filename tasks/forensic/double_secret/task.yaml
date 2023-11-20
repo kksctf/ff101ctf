@@ -1,0 +1,7 @@
+name: Двойное дно
+description: Этот котик явно слишком много знает. Сможешь узнать секрет кота Бориса?
+author: '@greg0r0'
+category: forensic
+flag: ptctf{s3cr3t_0f_B0r1s_1s_g00d_n1ght_sl33p}
+warmup: false
+server_port: null

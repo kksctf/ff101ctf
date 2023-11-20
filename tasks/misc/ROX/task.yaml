@@ -1,0 +1,8 @@
+name: ROX
+description: Помогите Алисе-путешественнице расшифровать эту сотню двойных сообщений от Боба
+author: '@chiukki'
+category: misc
+flag: ptctf{byt3s_0p3r4t10ns_4r3_s0_cr4zy}
+warmup: false
+server_port: 2802
+is_http: false

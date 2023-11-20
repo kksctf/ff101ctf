@@ -1,0 +1,8 @@
+name: cats_notes
+description: Мы собрали факты о самых милых существах на земле. Прошу вас ознакомиться..
+author: chiukki
+category: misc
+flag: ptctf{c4ts_di4ry_m3ow_m30W}
+warmup: false
+server_port: 5690
+domain_prefix: cats-notes

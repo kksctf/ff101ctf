@@ -1,0 +1,30 @@
+{% extends "base.jhtml" %}
+
+{% block css %}
+    {{ super() }}
+    <style>
+        .card {
+            width: 100%;
+            max-width: 330px;
+            padding: 5px;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+        {% if message %}
+            <div class="bg-warning text-dark">
+                {{ message }}
+            </div>
+        {% endif %}
+        <div class="card bg-secondary">
+            <ul class="list-group list-group-flush ">
+                {% for username in usernames %}
+                    <li class="list-group-item bg-secondary text-info">{{ username }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
